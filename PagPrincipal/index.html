@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opyher</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="img-log">
+            <img src="imagens/logo_cafe.png" alt="Logo de um prato de sopa" id="logo">
+        </div>
+       <div id="header-btn">
+            <button class="login-btn">ENTRAR</button>
+            <button class="login-btn">REGISTRA</button>
+        </div>
+    
+        <input type="checkbox" id="marcar"></input>
+        <label for="marcar"><div class="mobile-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div></label>
+    
+        <ul id="header-list">
+            <li>MENU</li>
+            <li>NOSSOS PRODUTOS</li>
+        </ul>
+    </header>
+
+    <div class="carrossel">
+        <section class="galeria">
+            <div class="fotos">
+                <img src="imagens/carrossel-3.jpg" alt="foto 1">
+
+            </div>
+            <div class="fotos">
+                <img src="imagens/carrossel-4.jpg" alt="foto 2">
+
+            </div>
+            <div class="fotos">
+                <img src="imagens/carrossel-2.jpg" alt="foto 3">
+            </div>
+            
+            <button id="antes" onclick="antesImg()">&#10094;</button>
+            <button id="depois" onclick="depoisImg()">&#10095;</button>
+            
+        </section>
+    </div>
+
+    <div class="conteiner">
+        <div class="cont-img">
+            <img src="imagens/conteudo-1.jpg" alt="" class="img-resposive">
+        </div>
+        <div class="cont-txt">
+            <h2>Dê uma <em>pausa</em></h2>
+            <p><strong>Aproveite</strong> sua pausa com um dos nossos sorvetes</p>
+            <a href="#">Saiba Mais</a>
+        </div>
+    </div>
+    <div class="conteiner">
+        
+        <div class="cont-txt">
+            <h2>Dê uma pausa</h2>
+            <p>Aproveite sua pausa com um dos nossos sorvetes</p>
+            <a href="#">Saiba Mais</a>
+        </div>
+        <div class="cont-img">
+            <img src="imagens/conteudo-2.jpg" alt="" class="img-resposive">
+        </div>
+    </div>
+    <script src="./scripts.js"></script>
+</body>
+</html>
