@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap');
+/* ==== FORMATAÇÃO ====*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul{
+   list-style: none;
+}
+.grid{
+    display: grid;
+    gap: 2rem;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+:root{
+    --fonte1: 'Poppins', sans-serif;
+    --fonte2: 'DM sans', sans-serif;
+    --cor03: #D3CADD;
+    --cor02: #A152EF;
+    --cor01: #261932;
+
+    /* FONTS */
+    --font-title-size: 1.875rem;
+    --font-sub-title-size: 1rem;
+
+    /* HEADER HEITHER*/
+    --header-height: 4.5rem 
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font: 400 1rem var(--fonte2);
+}
+
+
+/* === CABESALHO === */
+#header{
+    border-bottom:2px solid var(--cor03);
+    margin-bottom: 2rem;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background-color: #f6f3fb;
+}
+.title{
+    font: 700 1.87rem var(--fonte1);
+    color: #261932;
+}
+
+/*===== LOGO =======*/
+.logo{
+    font: 700 1.52rem var(--fonte2);
+    color: var(--cor02);
+    font-variant: small-caps;
+}
+.logo span{
+    color: black;
+}
+
+
+/*==== NAVIGATION =======*/
+nav{
+    height: 4.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+nav ul li{
+    text-align: center;
+}
+nav ul li a{
+    transition: color 0.2s;
+    position: relative;
+}
+nav ul li a:hover{
+    color: var(--cor02);
+}
+nav ul li a:hover::after{
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: var(--cor02);
+
+    position: absolute;
+    left: 0;
+    bottom: -1.5rem;
+}
+
+nav .menu-mobile{
+    opacity: 0;
+    visibility: hidden;
+}
+nav.show .menu-mobile{
+    opacity: 1;
+    visibility: visible;
+    background-color: #f6f3fb;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-content: center;
+}
+nav.show ul.grid{
+    gap: 4rem;
+}
+
+
+/*==== TOGGLE ======*/
+
+.toggle{
+    color: var(--cor02);
+    font-size: 1.5rem;
+}
+nav .toggle{
+    position: absolute;
+    right: 1.5rem;
+}
+nav.show .icon-menu{
+    visibility: hidden;
+    opacity: 0;
+}
+nav .icon-x{
+    visibility: hidden;
+    opacity: 0;
+}
+nav.show .icon-x{
+    visibility: visible;
+    opacity: 1;
+
+    position: absolute;
+    right: 1.5rem;
+}
+
+/* ===== FORMATAÇÃO CONTEUDO  ==== */
+.section{
+    padding: calc(5rem + var(--header-height)) 0;
+}
+.section .title{
+    margin-bottom: 2rem;
+}
+.section .sub-title{
+    font-size: var(--font-sub-title-size);
+}
+.section header{
+    margin-bottom: 4rem;
+}
+.section header strong{
+    color: var(--cor02);
+}
+.conteiner{
+    margin: 0 1.5rem 0 1.5rem;
+}
+
+/* HOME */
+#Home{
+    overflow-x: hidden;
+}
+#Home .conteiner{
+    margin: 0;
+}
+#Home .image{
+    position: relative;
+}
+#Home .image::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #A152EF;
+    top: -16%;
+    left: 16%;
+    
+}
+#Home .image img{
+    position: relative;
+    right: 2.93rem;
+}
+#Home .text{
+    margin: 0 1.5rem 0 1.5rem;
+    text-align: center;
+}
+
+#Home .text h1{
+    margin-bottom: 1rem;
+}
+#Home .text p{
+    margin-bottom: 2rem;
+}
+.button{
+    background-color: var(--cor02);
+    color: white;
+    height: 3.5rem;
+    padding: 0 2rem;
+    border-radius: 0.25rem;
+    display: inline-flex;
+    align-items: center;
+    transition: .5s ease-in-out;
+}
+.button:hover{
+    background-color: #7241aa;
+}
+
+/*==== SOBRE ====*/
+
+#about .text{
+    margin: 0 1.5rem 0 1.5rem;
+    text-align: left;
+}
+
+#about .text p{
+    margin-bottom: 2rem;
+}
+#about .conteiner{
+    margin: 0;
+}
+#about .image{
+    position: relative;
+}
+#about .image::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #A152EF;
+    top: -8.3%;
+    left: -33%;  
+}
+#about .image img{
+    position: relative;
+
+}
+
+/*==== SERVIÇOS ====*/
+.cards .grid{
+    gap: 1.5rem;
+}
+
+.card {
+    padding: 3.65rem 2rem;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0 ,0.08);
+    border-bottom: 0.15rem solid var(--cor02);
+    border-radius: 0.25rem 0.25rem 0 0;
+    text-align: center;
+
+}
+
+.card i{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+
+}
+i svg{
+    width: 4.7rem;
+    height: 4.7rem;
+}
+
+/*==== TEDTIMONIALS ====*/
+
+#testimonials {
+    background: white;
+}
+#testimonials blockquote{
+    padding: 2rem;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0 ,0.08);
+    border-radius: 1.5rem;
+}
+#testimonials blockquote p {
+    position: relative;
+    text-indent: 1.875rem;
+    margin-bottom: 1.5rem;
+    color: hsl(0, 41%, 10%);
+}
+#testimonials blockquote p span{
+    font: 700 2rem serif;
+    color: var(--cor02);
+    position: absolute;
+    top: -0.5rem;
+    left: -1.875rem;
+}
+#testimonials cite{
+    display: flex;
+    align-items: center;
+}
+#testimonials cite img{
+    width: 2rem;
+    height: 2rem;
+    object-fit: cover;
+    clip-path: circle();
+    margin-right: 0.5rem;
+}
+
+/* Swiper */
+.swiper-slide{
+    height: auto;
+    padding: 4rem 1rem;
+}
+.swiper-pagination-bullet{
+    width: 0.75rem;
+    height: 0.75rem;
+}
+.swiper-pagination-bullet-active{
+    background: var(--cor02);
+}
+
+/*==== CONTACT ====*/
+#contact p{
+    margin-bottom: 2rem;
+}
+#contact a{
+    margin-bottom: 3rem;
+}
+#contact a i svg{
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-right: 0.5rem;
+    color: white;
+}
+
+.links li{
+    display: flex;
+    align-items: center;
+}
+.links i svg{
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-right: 0.6rem;
+}
+
+/*==== FOOTER ====*/
+#footer{
+    background: var(--cor02);
+    padding: 4rem 1.5rem;
+}
+
+#footer .logo{
+    display: inline-block;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+#footer p{
+    color: white;
+    margin-bottom: 0.75rem;
+}
+
+#footer a i svg{
+    margin: 1.5rem 1.5rem 0 0;
+    color: white;
+
+    transition: 0.3s;
+}
+#footer a i svg:hover{
+    transform: translateY(-0.5rem);
+}
+
+/* back-to-top*/
+
+.back-to-top{
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+}
+.back-to-top svg{
+    height: 3rem;
+    width: 3rem;
+    padding: 0.5rem;
+    background: var(--cor02);
+    color: var(--cor03);
+    clip-path: circle();
+}
+
+.back-to-top.show{
+    visibility: visible;
+    opacity: 1;
+}
+
+/* RESPOSIVO */
+@media (min-width: 1200px){
+    .section{
+        padding: 10rem 0;
+    }
+    .section header{
+        max-width: 32rem;
+        text-align: center;
+        margin: 0 auto 0 auto;
+    }
+    .conteiner{
+        max-width: 1220px;
+        margin: 0 auto 0 auto;
+    }
+    main{
+        margin-top: var(--header-height);
+    }
+    nav .menu-mobile{
+        visibility: visible;
+        opacity: 1;
+    }
+    nav .menu-mobile ul{
+        display: flex;
+        gap: 2rem;
+    }
+    nav .icon-menu{
+        display: none;
+    }
+    nav .menu-mobile ul li a.title{
+        font: 400 1rem var(--fonte1);
+    }
+
+    /* Home */
+    #Home .conteiner{
+        grid-auto-flow: column;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+    #Home .image{
+        order: 1;
+    }
+    #Home .text{
+        order: 0;
+        max-width: 24rem;
+    }
+
+    /* About */
+    #about .conteiner{
+        grid-auto-flow: column;
+        margin: 0 auto;
+        width: fit-content;
+    }
+    #about .image{
+        order: 0;
+    }
+    #about .text{
+        order: 1;
+    }
+    /* Services */
+    #services .cards{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .card{
+        padding: 4rem 3rem 4rem 3rem;
+    }
+    
+    /* CONTACT */
+
+    #contact .conteiner{
+        grid-auto-flow: column;
+        align-items: center;
+    }
+    #contact .text{
+        max-width: 25rem;
+    }
+    /* Footer */
+
+    footer .section{
+        padding: 3.37rem 0;
+    }
+    
+    footer .conteiner{
+        grid-auto-flow: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    footer .logo{
+        font-size: 2.5rem;
+    }
+}
+@media (min-width: 992px){
+    :root{
+        --font-title-size: 1.875rem;
+        --font-sub-title-size: 1rem;
+    }
+    
+}
