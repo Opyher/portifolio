@@ -6,49 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Calculadora</title>
-    <style>
-        #visor{
-            background-color: cadetblue;
-        }
-    </style>
 </head>
 <body>
     <main class="conteiner">
-        <div id="card-header">
-            <div id="visor">
-                 
-            </div>
+        <div class="visor">
+            <textarea name="txt-area" id="txt-area"></textarea>
         </div>
-
-        <div id="card-body">
-            
-            <div class="linha">
-                <button class="btn" value="1" onclick="clicar()">1</button>
-                <button class="btn" value="2">2</button>
-                <button class="btn" value="3">3</button>
-                <button class="btn" value="+">+</button>
-
-            </div>
-            <div class="linha">
-                <button class="btn" value="4">4</button>
-                <button class="btn" value="5">5</button>
-                <button class="btn" value="6">6</button>
-                <button class="btn" value="-">-</button>
-            </div>
-            <div class="linha">
-                <button class="btn" value="7">7</button>
-                <button class="btn" value="8">8</button>
-                <button class="btn" value="9">9</button>
-                <button class="btn" value="*">x</button>
-            </div>
-            <div class="linha">
-                <button value="C" id="delete">C</button>
-                <button value="=" id="igual">=</button>
-                <button class="btn" value="/">÷</button>
-
-            </div>
-        </div>
-        <script src="./scripts.js"></script>
     </main>
 </body>
 </html>
