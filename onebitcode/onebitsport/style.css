@@ -1,0 +1,235 @@
+/*==== VARIAVEIS ====*/
+:root{
+    --cor-neutra: #fdf5f5;
+    --cor-principal: #650099;
+    --cor-adjacente: #CC0068;
+    --dark-color: #110221;
+    --dark-color2: #660034;
+    --light-color: #996699;
+    --light-color2: #CC3366; 
+
+    --fonte-titulo: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte-texto: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+/* ======= FORMATAÇÂO ====== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+h2{
+    font-family: var(--fonte-titulo);
+}
+p{
+    font-family: var(--fonte-texto);
+}
+img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+/* ==== HEADER ==== */
+.header{
+    width: 100%;
+    background-color: var(--cor-principal);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    box-shadow: 0px 5px 0px rgb(35, 33, 33);
+}
+.logo h2{
+    font-family: var(--fonte-titulo);
+    color: var(--cor-neutra);
+}
+.logo h2 span{
+    color: var(--cor-adjacente);
+}
+.menu{
+    display: inline-flex;
+    gap: 0.2rem;
+}
+.menu a{
+    font-family: var(--fonte-titulo);
+    color: var(--cor-neutra);
+    padding: 0.3rem;
+}
+.menu a:hover{
+    background-color: var(--cor-adjacente);
+    border-bottom: 2px solid black;
+}
+
+/* ==== CONTEINER ===== */
+.conteiner{
+    width: 100%;
+}
+.title{
+    width: 100%;
+}
+.title h2{
+    text-align: center;
+    margin: 1rem;
+    font-family: var(--fonte-titulo);
+}
+.title p{
+    text-align: center;
+    color: #636067;
+    padding: 1rem;
+}
+
+/* ===== SECTION's ==== */
+.sections{
+    width: 100%;
+    display: grid;
+    gap: 3rem;
+}
+
+/* ==== SECTION 1 ===== */
+#section1{
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+}
+#section1 .item{
+    padding: 0.5rem;
+    border: 2px solid var(--dark-color);
+    border-radius: 0.5rem;
+    transition: 0.4s ease-in-out;
+}
+#section1 .item:hover{
+    border: 3spx solid var(--dark-color);
+    color: var(--cor-neutra);
+    background-color: var(--light-color);
+    zoom: 1.05;
+    cursor: pointer;
+}
+#section1 .item h2, p{
+    padding: 0.3rem;
+}
+
+/* ===== SECTION 2 ==== */
+#section2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    background-color: var(--cor-adjacente);
+    padding: 0.7rem;
+    border-radius: 1rem 1rem 0 0;
+}
+#section2 .cards{
+    padding: 0.5rem;
+    border: 2px solid var(--dark-color);
+    border-radius: 0.5rem;
+}
+#section2 .cards h2{
+    text-align: center;
+    padding: 0.3rem;
+}
+#section2 .cards h2:hover{
+    zoom: 1.1;
+    color: var(--cor-neutra);
+    cursor: pointer;
+}
+
+/* ==== FOOTER ==== */
+.footer{
+    background-color: var(--cor-principal);
+    margin-top: 3rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.footer p{
+    color: var(--cor-neutra);
+}
+/* ==== RESPONSIVE ==== */
+@media (min-width: 580px){
+    .header{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2rem;
+    }
+    .header .logo h2{
+        font-size: 1.4rem;
+    }
+    a{
+        font-size: 1.1rem;
+    }
+    .conteiner h2{
+        font-size: 1.4rem;
+    }
+    .conteiner p{
+        font-size: 1rem;
+    }
+    
+    /* ==== SECTION 1 ==== */
+    #section1{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2rem;
+    }
+}
+
+@media (min-width: 960px){
+    .header .logo h2{
+        font-size: 1.4rem;
+    }
+    a{
+        font-size: 1rem;
+    }
+    .conteiner h2{
+        font-size: 1.5rem;
+    }
+    .conteiner p{
+        font-size: 1rem;
+    }
+    .sections{
+        grid-template-columns: 2fr 1fr;
+    }
+    /* ==== SECTION 1 ==== */
+    #section1{
+        grid-template-columns: 1fr 1fr;
+    }
+    
+}
+
+@media (min-width: 1280px){
+    .sections{
+        grid-template-columns: 2fr 1fr;
+    }
+    /* ==== SECTION 1 ==== */
+    #section1{
+        margin: 2rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-auto-flow: minmax(260px, 300px);
+        grid-template-areas: 
+            "item1 item2 item3";
+    }
+    .item{
+        min-width: 300px;
+        min-height: 300px;
+    }
+
+    #section2{
+        max-width: 400px;
+    }
+
+}
+
