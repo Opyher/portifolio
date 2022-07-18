@@ -10,8 +10,46 @@
 <body>
     <main class="conteiner">
         <div class="visor">
-            <textarea name="txt-area" id="txt-area"></textarea>
+            <span id="res">0</span>
+        </div>
+        <div class="teclas grid">
+           
+
+                <!-- linha 1 -->
+
+                <button name="apag" value="CE" id="apag" class="largeButton" onclick="limpar()">CE</button> 
+                <button name="opr" value="%" id="opr-porc">%</button>
+                <button name="opr" value="/" id="opr-div">÷</button>
+
+                <!-- linha 2 -->
+
+                <button name="num" value="7" id="num7">7</button>
+                <button name="num" value="8" id="num8">8</button></td>
+                <button name="num" value="9" id="num9">9</button>
+                <button name="opr" value="*" id="opr-mult">x</button>
+                
+                <!-- linha 3 -->
+
+                <button name="num" value="4" id="num4">4</button>
+                <button name="num" value="5" id="num5">5</button>
+                <button name="num" value="6" id="num6">6</button>
+                <button name="opr" value="-" id="opr-sub">-</button>
+
+                <!-- linha 4 -->
+
+                <button name="num" value="1" id="num1">1</button>
+                <button name="num" value="2" id="num2">2</button>
+                <button name="num" value="3" id="num3">3</button>
+                <button name="opr" value="+" id="opr-adc">+</button>
+
+                <!-- linha 5 -->
+
+                <button name="num" value="0" id="num0" class="largeButton">0</button>
+                <button name="ponto" value="." id="pont">.</button>
+                <button name="opr" value="=" id="opr-igual">=</button>
         </div>
     </main>
+    <script src="operacao.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
